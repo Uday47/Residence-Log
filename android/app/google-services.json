@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "821757181698",
+    "firebase_url": "https://residence-log-default-rtdb.firebaseio.com",
+    "project_id": "residence-log",
+    "storage_bucket": "residence-log.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:821757181698:android:77af46954d1097706c0c1b",
+        "android_client_info": {
+          "package_name": "com.example.residence_log"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "821757181698-5vr8vg7elmh527du3j89ii6hh9ckovdn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC--OkHK9IpDJqD6G6pzPsRLA1dBgwd70k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "821757181698-5vr8vg7elmh527du3j89ii6hh9ckovdn.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "821757181698-fi94hbanaelbpj5go7qen6dc6rfcdr58.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.residenceLog"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

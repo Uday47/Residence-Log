@@ -1,0 +1,51 @@
+import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
+import 'dart:io';
+
+
+
+
+class CamPage extends StatefulWidget {
+  @override
+  _CamPageState createState() => _CamPageState();
+
+
+
+}
+class _CamPageState extends State<CamPage> {
+
+  Future<File> pickImage(ImageSource imageSource) async {
+    File _image = File('');
+    final _picker = ImagePicker();
+
+    final pickedFile = await _picker.pickImage(source: imageSource);
+
+    if (pickedFile != null) {
+      print('PickedFile: ${pickedFile.toString()}');
+      setState(() {
+        _image = File(pickedFile.path); // Exception occurred here
+      });
+    } else {
+      print('PickedFile: is null');
+    }
+    if (_image != null) {
+      return _image;
+    }
+    return _image;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder(future: pickImage(ImageSource.camera),
+        builder: (BuildContext context, AsyncSnapshot<File> file) {
+    return Scaffold(
+    backgroundColor: Colors.black,
+    body: file.data != null ? Image.file(
+      file.data!,
+        width: 100,
+        height: 100,
+        fit: BoxFit.fitHeight,
+    ): const Text('imageFile is null'),);
+    });
+  }
+}
